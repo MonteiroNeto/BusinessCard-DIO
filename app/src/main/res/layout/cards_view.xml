@@ -8,6 +8,7 @@
 
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvItem"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:checkable="true"
@@ -26,6 +27,7 @@
             android:padding="8dp">
 
             <TextView
+                android:id="@+id/tvName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="Nome da pessoa"
@@ -33,6 +35,7 @@
                 android:layout_margin="8dp"/>
 
             <TextView
+                android:id="@+id/tvTelefone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="Telefone"
@@ -40,12 +43,14 @@
                 />
 
             <TextView
+                android:id="@+id/tvEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="E-mail"
                 android:layout_marginStart="8dp"
                 />
             <TextView
+                android:id="@+id/tvEmpresa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="Empresa"
