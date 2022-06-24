@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="8dp"
-            tools:itemCount="8"
+            tools:itemCount="3"
             tools:listitem="@layout/cards_view"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>

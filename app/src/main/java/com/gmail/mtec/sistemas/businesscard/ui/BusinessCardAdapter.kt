@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.gmail.mtec.sistemas.businesscard.R
 import com.gmail.mtec.sistemas.businesscard.data.BusinessCardModel
 import com.gmail.mtec.sistemas.businesscard.databinding.CardsViewBinding
 
@@ -39,10 +40,18 @@ class BusinessCardAdapter :
             binding.tvEmail.text = item.email
             binding.tvEmpresa.text = item.empresa
 
-            binding.cvItem.setBackgroundColor(Color.parseColor(item.card_background))
-            binding.cvItem.setOnClickListener {
-                listenerShare(it)
+            try {
+                binding.cvItem.setBackgroundColor(Color.parseColor(item.card_background))
+            }catch (e:Exception){
+                binding.cvItem.setBackgroundColor(Color.GRAY)
             }
+
+            binding.cvItem.setOnLongClickListener {
+                listenerShare(it)
+                true
+            }
+
+
 
         }
     }
